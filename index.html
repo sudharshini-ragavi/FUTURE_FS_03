@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Spice & Bliss</title>
+
+<!-- RESPONSIVE -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h2>🍽️ Spice & Bliss</h2>
+  <ul>
+    <li onclick="showSection('home')">Home</li>
+    <li onclick="showSection('booking')">Book Table</li>
+    <li onclick="showSection('about')">About</li>
+    <li onclick="showSection('timing')">Timing</li>
+    <li onclick="showSection('menu')">Menu</li>
+    <li onclick="showSection('ambience')">Ambience</li>
+    <li onclick="showSection('contact')">Contact</li>
+    <li onclick="showSection('review')">Reviews</li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="section">
+  <div class="home-container">
+    <img src="enterance.jpg">
+
+
+<div class="home-text">
+<h1>Spice & <span>Bliss</span></h1>
+<p>Enjoy South Indian, North Indian & Continental dishes.</p>
+<p>Price Range: ₹200–400</p>
+<p>Service: Delivery / Dine-in / Takeaway</p>
+<p class="tagline">Where Every Flavor Tells a Story</p>
+<p class="highlight">🔥 Weekend Special – Flat 15% OFF</p>
+<div class="info-cards">
+  <div class="card">⭐ 4.5 Rating</div>
+  <div class="card">🍽️ Multi-Cuisine</div>
+  <div class="card">📍 Chennai</div>
+</div>
+<p class="signature">Crafted with Passion. Served with Love.</p>
+<button onclick="goToMenu()" class="btn">Explore Menu</button>
+<button onclick="goToBooking()" class="btn">Book Table</button>
+</div>
+</div>
+</section>
+
+
+<section id="booking" class="section">
+  <h2>Book Your Table</h2>
+
+  <form class="booking-form" onsubmit="submitBooking(event)">
+    
+    <input type="text" id="custName" placeholder="Enter your name" required>
+
+    <input type="date" id="custDate" required>
+
+    <input type="time" id="custTime" required>
+
+    <select id="tableSelect" required>
+      <option value="">Select Table</option>
+      <option>Table 1 (2 Seats)</option>
+      <option>Table 2 (4 Seats)</option>
+      <option>Table 3 (6 Seats)</option>
+      <option>Table 4 (Family)</option>
+      <option>Table 5 (Couple Special)</option>
+    </select>
+
+    <button type="submit">Confirm Booking</button>
+  </form>
+
+  <p id="bookingMsg"></p>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="about-container">
+    <div class="about-text">
+     <p>Welcome to <b>Spice & Bliss</b>, where flavors from across India and around the world come together to create a truly unforgettable dining experience.
+</p>
+<p>
+From the rich spices of South India to the comforting classics of North India and the elegance of Continental cuisine, we bring you a carefully curated menu that satisfies every craving.
+</p>
+<h3>Our Story</h3>
+<p>
+Spice & Bliss was founded with a simple vision — to create a place where people can enjoy diverse cuisines under one roof while feeling at home. What started as a small idea has now grown into a favorite dining destination for families, friends, and food lovers.
+</p>
+<p>
+Our journey is built on passion, dedication, and a love for great food. Every dish we serve reflects our commitment to quality and authenticity.
+</p>
+<h3>What Makes Us Special</h3>
+<ul>
+<li>Authentic South Indian, North Indian & Continental dishes</li>
+<li>Fresh ingredients sourced daily</li>
+<li>Expert chefs with years of experience</li>
+<li>Comfortable and family-friendly ambience</li>
+<li>Wide range of desserts and beverages</li>
+</ul>
+<h3>Our Mission</h3>
+<p>
+Our mission is to deliver exceptional taste, quality, and service in every meal we serve. We aim to create memorable dining experiences that bring people together and leave a lasting impression.
+</p>
+<h3>Our Vision</h3>
+<p>
+We aspire to become one of the most loved multi-cuisine restaurants, known for innovation, quality, and customer satisfaction. Our goal is to continuously evolve and bring new flavors to our customers.
+</p>
+<h3>Our Chef</h3>
+<p>
+Our kitchen is led by experienced chefs who bring creativity and expertise to every dish. With a passion for blending traditional recipes and modern techniques, our chefs ensure that every meal is crafted to perfection.
+</p>
+<p>
+At <b>Spice & Bliss</b>, we don’t just serve food — we create experiences, celebrate flavors, and build memories that last a lifetime.
+</p>
+    </div>
+    <img src="https://i.pinimg.com/736x/33/c3/f7/33c3f7c801750a4ffe036bd54adbd0ed.jpg">
+  </div>
+</section>
+
+<!-- TIMING -->
+<section id="timing" class="section">
+<h2>Restaurant Timing</h2>
+<table>
+<tr> 
+<th>Day</th> 
+<th>Morning</th> 
+<th>Afternoon</th> 
+<th>Evening</th> 
+</tr> 
+<tr> 
+<th>Sunday</th> 
+<th>7.00-12.00</th> 
+<th>12.30-4.00</th> 
+<th>6.00-11.00</th> 
+</tr> 
+<tr> 
+<th>Monday</th> 
+<th>7.00-11.00</th> 
+<th>12.30-4.00</th> 
+<th>7.00-10.30</th> 
+</tr> 
+<tr> 
+<th>Tuesday</th> 
+<th>7.00-11.00</th> 
+<th>12.30-4.00</th> 
+<th>7.00-10.30</th> 
+</tr> 
+<tr> 
+<th>Wednesday</th> 
+<th>7.00-11.00</th> 
+<th>12.30-4.00</th> 
+<th>7.00-10.30</th> 
+</tr> 
+<tr> 
+<th>Thursday</th> 
+<th>7.00-11.00</th> 
+<th>12.30-4.00</th> 
+<th>7.00-10.30</th> 
+</tr> 
+<tr> 
+<th>Friday</th> 
+<th>7.00-11.00</th> 
+<th>12.30-4.00</th> 
+<th>7.00-10.30</th> 
+</tr> 
+<tr> 
+<th>Saturday</th> 
+<th>7.00-12.00</th> 
+<th>12.30-4.00</th> 
+<th>6.00-11.00</th> 
+</tr>
+</table>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="section">
+<h2>Our Menu</h2>
+<div class="grid">
+<img src="https://i.pinimg.com/736x/75/7d/3e/757d3e4c45049935c82112a21b7bc7ea.jpg" onclick="openLightbox(this,'menu')">
+<img src="https://i.pinimg.com/736x/d8/93/5f/d8935f25f65f2dc69cea78c22db37955.jpg" onclick="openLightbox(this,'menu')">
+<img src="https://i.pinimg.com/736x/a6/c1/cc/a6c1cc79bb4293a4b0c33b61b35a431b.jpg" onclick="openLightbox(this,'menu')">
+<img src="https://i.pinimg.com/736x/a4/39/a8/a439a8addc8c027ad1fee828d621fb0a.jpg" onclick="openLightbox(this,'menu')">
+</div>
+</section>
+
+<!-- AMBIENCE -->
+<section id="ambience" class="section">
+<h2>Ambience</h2>
+<div class="grid">
+<img src="https://i.pinimg.com/736x/8c/3c/b5/8c3cb5d02ffaf91ab0f68626e983acb5.jpg" onclick="openLightbox(this,'ambience')"> 
+<img src="https://i.pinimg.com/736x/c5/c6/5f/c5c65fb0db0b42f2f1ca173b8fd38c56.jpg" onclick="openLightbox(this,'ambience')"> 
+<img src="https://i.pinimg.com/736x/14/f9/d8/14f9d8081ed17f143de72f14d04fbe24.jpg" onclick="openLightbox(this,'ambience')"> 
+<img src="https://i.pinimg.com/736x/72/3f/29/723f299740f27c834ef0725dece18d3e.jpg" onclick="openLightbox(this,'ambience')"> 
+<img src="https://i.pinimg.com/736x/66/b8/4f/66b84f5512be9ac6c5f2a9367ab690e4.jpg" onclick="openLightbox(this,'ambience')"> 
+<img src="https://i.pinimg.com/736x/71/68/65/7168655518a294511d97aec7c31dda34.jpg" onclick="openLightbox(this,'ambience')"> 
+<img src="https://i.pinimg.com/736x/36/9d/07/369d077a00b27b3d69f7ef6a5f8a66d6.jpg" onclick="openLightbox(this,'ambience')"> 
+<img src="https://i.pinimg.com/736x/0e/c2/89/0ec289492947872976c5c52215280faa.jpg" onclick="openLightbox(this,'ambience')"> 
+<img src="https://i.pinimg.com/736x/f5/8b/02/f58b02db03d5e4b818c01bb271f86f32.jpg" onclick="openLightbox(this,'ambience')"> 
+<img src="https://i.pinimg.com/736x/f0/77/e7/f077e70250805654b38a7dbcf74c8e74.jpg" onclick="openLightbox(this,'ambience')"> 
+<img src="https://i.pinimg.com/736x/f2/9f/f7/f29ff752fe9b098e8a3c9e73d5de2dec.jpg" onclick="openLightbox(this,'ambience')">
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+<h2>Contact Us</h2>
+<p>📍 Anna Nagar, Chennai</p>
+<p>📞 +91 9876543210</p>
+<p>📧 spiceandbliss@gmail.com</p>
+<iframe 
+src="https://www.google.com/maps?q=Anna+Nagar+Chennai&output=embed"
+width="100%" height="250" style="border:0;" allowfullscreen="">
+</iframe>
+<p>✨ We accept reservations for birthdays & events.</p>  
+<p>🚗 Free parking available.</p>  
+<p>🎉 Live music on weekends.</p>  
+</section>
+
+<!-- REVIEW -->
+<section id="review" class="section">
+<h2>Customer Reviews</h2>
+
+<div class="rating">
+  ★★★★★
+</div>
+
+<input type="text" id="name" placeholder="Your name">
+<input type="text" id="reviewText" placeholder="Write review">
+<button onclick="addReview()">Submit</button>
+
+<div id="reviewList"></div>
+</section>
+
+<!-- SCRIPT -->
+<script>
+function showSection(id) {
+  document.querySelectorAll(".section").forEach(s => s.style.display="none");
+  document.getElementById(id).style.display="block";
+}
+
+function addReview() {
+  let name = document.getElementById("name").value;
+  let review = document.getElementById("reviewText").value;
+
+  if (!name || !review) return alert("Fill all fields");
+
+  let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+  reviews.push({name, review});
+  localStorage.setItem("reviews", JSON.stringify(reviews));
+
+  document.getElementById("name").value="";
+  document.getElementById("reviewText").value="";
+
+  displayReviews();
+}
+
+function displayReviews() {
+  let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+  let output = "";
+  reviews.forEach(r => {
+    output += `<div class="review-box"><b>${r.name}</b><p>${r.review}</p></div>`;
+  });
+  document.getElementById("reviewList").innerHTML = output;
+}
+
+window.onload = function() {
+  showSection('home');
+  displayReviews();
+};
+</script>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = "translateY(0)";
+    }
+  });
+});
+
+document.querySelectorAll(".section").forEach(sec => {
+  sec.style.opacity = 0;
+  sec.style.transform = "translateY(50px)";
+  observer.observe(sec);
+});
+
+let currentIndex = 0;
+let images = [];
+
+function openLightbox(img, section) {
+
+  // SELECT ONLY IMAGES FROM THAT SECTION
+  if (section === "menu") {
+    images = Array.from(document.querySelectorAll("#menu img"));
+  } else if (section === "ambience") {
+    images = Array.from(document.querySelectorAll("#ambience img"));
+  }
+
+  currentIndex = images.indexOf(img);
+
+  document.getElementById("lightbox").style.display = "block";
+  document.getElementById("lightbox-img").src = img.src;
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+
+function changeImage(step) {
+  currentIndex += step;
+
+  if (currentIndex < 0) currentIndex = images.length - 1;
+  if (currentIndex >= images.length) currentIndex = 0;
+
+  document.getElementById("lightbox-img").src = images[currentIndex].src;
+}
+
+function goToMenu() {
+  showSection('menu');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function goToBooking() {
+  showSection('booking');
+}
+</script>
+<!-- IMAGE VIEWER -->
+<div id="lightbox">
+  <span class="close" onclick="closeLightbox()">×</span>
+  <img id="lightbox-img">
+  <button class="prev" onclick="changeImage(-1)">❮</button>
+  <button class="next" onclick="changeImage(1)">❯</button>
+</div>
+</body>
+</html>
